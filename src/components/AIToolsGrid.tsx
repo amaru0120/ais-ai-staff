@@ -1,5 +1,6 @@
-import { motion } from 'framer-motion';
-import { MessageSquare, Search, Image, FileText, Sparkles } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
+import { MessageSquare, Search, Image, FileText, Sparkles, X } from 'lucide-react';
 
 interface AITool {
     name: string;
@@ -102,6 +103,8 @@ const AIToolCard = ({ tool, index }: { tool: AITool; index: number }) => {
 };
 
 export const AIToolsGrid = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     return (
         <section id="ai-tools" className="py-20 bg-white relative overflow-hidden">
             <div className="container mx-auto px-6 relative z-10">
@@ -124,6 +127,25 @@ export const AIToolsGrid = () => {
                 </div>
 
                 <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="text-center mt-12 mb-8"
+                >
+                    <button
+                        onClick={() => setIsModalOpen(true)}
+                        className="relative inline-flex items-center gap-2 bg-gradient-to-r from-orange-400 to-pink-500 text-white px-6 md:px-8 py-4 rounded-full font-bold text-base md:text-lg shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 active:scale-95"
+                    >
+                        <span className="absolute -top-1 -right-1 flex h-4 w-4">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-4 w-4 bg-yellow-400"></span>
+                        </span>
+                        <Sparkles className="w-5 h-5 flex-shrink-0" />
+                        <span>【実例】このサイトを制作した『AIスタメン』の全容を見る</span>
+                    </button>
+                </motion.div>
+
+                <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
@@ -138,6 +160,59 @@ export const AIToolsGrid = () => {
                     </a>
                 </motion.div>
             </div>
-        </section>
+            {/* Modal Overlay */}
+            <AnimatePresence>
+                {isModalOpen && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={() => setIsModalOpen(false)}
+                        className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+                    >
+                        <motion.div
+                            initial={{ scale: 0.9, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.9, opacity: 0 }}
+                            onClick={(e) => e.stopPropagation()}
+                            className="bg-white rounded-2xl p-8 max-w-lg w-full relative shadow-2xl overflow-hidden"
+                        >
+                            {/* Close Button */}
+                            <button
+                                onClick={() => setIsModalOpen(false)}
+                                className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors bg-gray-100 rounded-full p-1"
+                            >
+                                <X className="w-5 h-5" />
+                            </button>
+
+                            {/* Content */}
+                            <div className="text-center">
+                                <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-full mb-6">
+                                    <Sparkles className="w-8 h-8 text-accent" />
+                                </div>
+                                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-6 leading-snug break-keep text-balance">
+                                    営業一筋・コード未経験者が<br className="hidden md:block" />
+                                    3日でサイトを作れた理由
+                                </h3>
+                                <p className="text-gray-600 leading-relaxed text-balance text-left md:text-center text-sm md:text-base">
+                                    実はこのサイト、AIたちを『スタメン』として采配し、自ら実装しました。<br className="block my-2" />
+                                    技術がなくても、AIを使いこなせば、あなたのビジネスもここまで加速します。
+                                </p>
+
+                                <div className="mt-8">
+                                    <button
+                                        onClick={() => setIsModalOpen(false)}
+                                        className="bg-primary text-white px-8 py-3 rounded-full font-bold text-sm hover:bg-primary/90 transition-colors"
+                                    >
+                                        閉じる
+                                    </button>
+                                </div>
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </div>
+        </section >
     );
 };
