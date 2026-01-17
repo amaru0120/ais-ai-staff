@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Clock, CheckCircle, TrendingDown, Users } from 'lucide-react';
+import { Clock, CheckCircle, TrendingDown } from 'lucide-react';
 
 export const AIEmployeeConcept = () => {
     return (
