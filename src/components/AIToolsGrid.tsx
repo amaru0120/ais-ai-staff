@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
+import { createPortal } from 'react-dom';
 import { MessageSquare, Search, Image, FileText, Sparkles, X } from 'lucide-react';
 
 interface AITool {
@@ -160,15 +161,15 @@ export const AIToolsGrid = () => {
                     </a>
                 </motion.div>
             </div>
-            {/* Modal Overlay */}
-            <AnimatePresence>
-                {isModalOpen && (
+            {/* Modal Overlay - Portalled to body to escape overflow/z-index issues */}
+            {isModalOpen && createPortal(
+                <AnimatePresence>
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         onClick={() => setIsModalOpen(false)}
-                        className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+                        className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[9999] flex items-center justify-center p-4"
                     >
                         <motion.div
                             initial={{ scale: 0.9, opacity: 0 }}
@@ -176,6 +177,7 @@ export const AIToolsGrid = () => {
                             exit={{ scale: 0.9, opacity: 0 }}
                             onClick={(e) => e.stopPropagation()}
                             className="bg-white rounded-2xl p-8 max-w-lg w-full relative shadow-2xl overflow-hidden"
+                            style={{ maxHeight: '90vh', overflowY: 'auto' }}
                         >
                             {/* Close Button */}
                             <button
@@ -210,9 +212,9 @@ export const AIToolsGrid = () => {
                             </div>
                         </motion.div>
                     </motion.div>
-                )}
-            </AnimatePresence>
-        </div>
+                </AnimatePresence>,
+                document.body
+            )}
         </section >
     );
 };
