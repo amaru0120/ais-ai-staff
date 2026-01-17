@@ -12,10 +12,10 @@ export const Contact = () => {
                         viewport={{ once: true }}
                         className="text-center mb-16 px-6"
                     >
-                        <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4 text-balance break-keep">
+                        <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4 text-balance">
                             まずは<span className="text-accent">30分の無料診断</span>から
                         </h2>
-                        <p className="text-base md:text-lg text-gray-600 text-balance leading-relaxed break-keep">
+                        <p className="text-base md:text-lg text-gray-600 text-balance leading-relaxed">
                             あなたのビジネスに、AIがどう貢献できるか具体的に提案します。
                         </p>
                     </motion.div>

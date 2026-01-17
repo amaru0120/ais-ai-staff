@@ -17,8 +17,8 @@ export const Service = () => {
                     viewport={{ once: true }}
                     className="mb-16 text-center"
                 >
-                    <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight text-balance break-keep">Service Plans</h2>
-                    <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto text-balance px-6 leading-relaxed break-keep">
+                    <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight text-balance">Service Plans</h2>
+                    <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto text-balance px-6 leading-relaxed">
                         企業の成長フェーズに合わせた、極めてシンプルな3つのステップへのアプローチ
                     </p>
                 </motion.div>
@@ -171,7 +171,7 @@ export const Service = () => {
                         </div>
 
                         <div className="max-w-2xl relative z-10 text-gray-600 leading-relaxed">
-                            <h3 className="text-gray-900 text-2xl md:text-3xl font-bold mb-6 break-keep tracking-tight">
+                            <h3 className="text-gray-900 text-2xl md:text-3xl font-bold mb-6 tracking-tight">
                                 対応可能日時のご案内
                             </h3>
                             <p className="text-gray-600 leading-relaxed text-balance text-sm md:text-base px-6">
