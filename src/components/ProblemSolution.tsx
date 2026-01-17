@@ -11,12 +11,12 @@ export const ProblemSolution = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-primary">
+                    <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight text-primary text-wrap-balance">
                         2026年、AIを使わないことは
                         <br className="md:hidden" />
                         <span className="text-red-600 block mt-2">「撤退」を意味します。</span>
                     </h2>
-                    <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto font-medium leading-relaxed">
+                    <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto font-medium leading-relaxed text-wrap-balance">
                         市場のスピードは加速し続けています。<br className="md:hidden" />
                         人間だけの力では、もう追いつけません。
                     </p>

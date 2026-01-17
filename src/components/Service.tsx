@@ -17,8 +17,8 @@ export const Service = () => {
                     viewport={{ once: true }}
                     className="mb-16 text-center"
                 >
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">Service Plans</h2>
-                    <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+                    <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight text-wrap-balance">Service Plans</h2>
+                    <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto text-wrap-balance px-4">
                         企業の成長フェーズに合わせた、極めてシンプルな3つのステップへのアプローチ
                     </p>
                 </motion.div>

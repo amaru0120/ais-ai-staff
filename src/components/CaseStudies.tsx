@@ -41,12 +41,12 @@ export const CaseStudies = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-center mb-16"
+                    className="text-center mb-16 px-4"
                 >
-                    <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+                    <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4 text-wrap-balance">
                         AI<span className="text-accent">活用事例</span>
                     </h2>
-                    <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+                    <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto text-wrap-balance">
                         あなたの業務を劇的に変える、AI従業員の具体的な「働き方」をご紹介します。
                     </p>
                 </motion.div>

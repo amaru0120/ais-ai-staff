@@ -69,8 +69,8 @@ export const FAQ = () => {
                         transition={{ duration: 0.8 }}
                         className="lg:w-1/2 text-center lg:text-left"
                     >
-                        <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">よくあるご質問</h2>
-                        <p className="text-gray-600">お客様からよくいただくご質問にお答えします。</p>
+                        <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4 text-wrap-balance">よくあるご質問</h2>
+                        <p className="text-gray-600 text-wrap-balance">お客様からよくいただくご質問にお答えします。</p>
                     </motion.div>
 
                     <motion.div
@@ -121,7 +121,7 @@ export const FAQ = () => {
                             />
                         </motion.div>
 
-                        <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+                        <h2 className="text-2xl md:text-5xl font-bold text-white mb-6 text-wrap-balance">
                             あなたの隣に、<span className="text-accent">最強のAI従業員</span>を。
                         </h2>
                         <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
