@@ -1,6 +1,7 @@
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { ProblemSolution } from './components/ProblemSolution';
+import { SocialContext } from './components/SocialContext';
 import { AIEmployeeConcept } from './components/AIEmployeeConcept';
 import { CaseStudies } from './components/CaseStudies';
 import { BeforeAfter } from './components/BeforeAfter';
@@ -19,6 +20,7 @@ function App() {
       <Navbar />
       <Hero />
       <ProblemSolution />
+      <SocialContext />
       <AIEmployeeConcept />
       <CaseStudies />
       <BeforeAfter />
