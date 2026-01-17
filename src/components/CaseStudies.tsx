@@ -46,7 +46,7 @@ export const CaseStudies = () => {
                     <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4 text-balance break-keep">
                         AI<span className="text-accent">活用事例</span>
                     </h2>
-                    <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto text-balance leading-relaxed">
+                    <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto text-balance leading-relaxed break-keep">
                         あなたの業務を劇的に変える、AI従業員の具体的な「働き方」をご紹介します。
                     </p>
                 </motion.div>

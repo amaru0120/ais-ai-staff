@@ -16,7 +16,7 @@ export const ProblemSolution = () => {
                         <br className="hidden md:block" />
                         <span className="text-red-600 block mt-2">「撤退」を意味します。</span>
                     </h2>
-                    <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto font-medium leading-relaxed text-balance">
+                    <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto font-medium leading-relaxed text-balance break-keep">
                         市場のスピードは加速し続けています。<br className="hidden md:block" />
                         人間だけの力では、もう追いつけません。
                     </p>

@@ -18,7 +18,7 @@ export const Service = () => {
                     className="mb-16 text-center"
                 >
                     <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight text-balance break-keep">Service Plans</h2>
-                    <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto text-balance px-4 leading-relaxed">
+                    <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto text-balance px-6 leading-relaxed break-keep">
                         企業の成長フェーズに合わせた、極めてシンプルな3つのステップへのアプローチ
                     </p>
                 </motion.div>
@@ -171,13 +171,13 @@ export const Service = () => {
                         </div>
 
                         <div className="max-w-2xl relative z-10 text-gray-600 leading-relaxed">
-                            <h3 className="text-gray-900 text-2xl md:text-3xl font-bold mb-6 break-keep">
+                            <h3 className="text-gray-900 text-2xl md:text-3xl font-bold mb-6 break-keep tracking-tight">
                                 対応可能日時のご案内
                             </h3>
-                            <p className="text-gray-600 leading-relaxed text-balance text-sm md:text-base px-2">
+                            <p className="text-gray-600 leading-relaxed text-balance text-sm md:text-base px-6">
                                 現場実装の最前線で常に知見をアップデートし続けるため、平日は実務に専念しております。
                                 そのため、クライアント様との直接対話は、専念ができる
-                                <strong className="text-blue-700 font-bold mx-1 text-base md:text-lg">
+                                <strong className="text-blue-700 font-bold mx-1 text-base md:text-lg block md:inline mt-1 md:mt-0">
                                     【土曜・日曜・祝日】の完全予約制
                                 </strong>
                                 に限定させていただいております。

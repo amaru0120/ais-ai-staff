@@ -26,7 +26,7 @@ export const Hero = () => {
                         animate={{ opacity: 1, y: 0 }}
                         className="drop-shadow-2xl"
                     >
-                        <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 mx-auto max-w-6xl text-white text-balance break-keep">
+                        <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 mx-auto max-w-6xl text-white text-balance break-keep tracking-tight">
                             その『面倒』、AI従業員に<br className="hidden md:block" />
                             <span className="text-accent text-glow block md:inline mt-2 md:mt-0 md:ml-3 text-glow-blue whitespace-nowrap text-xl sm:text-2xl md:text-6xl lg:text-7xl">月給33,000円で任せませんか？</span>
                         </h1>
@@ -37,7 +37,7 @@ export const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
-                        className="text-base sm:text-lg md:text-xl lg:text-2xl text-white mb-12 leading-relaxed max-w-4xl mx-auto px-4 drop-shadow-lg font-medium text-balance"
+                        className="text-base sm:text-lg md:text-xl lg:text-2xl text-white mb-12 leading-relaxed max-w-4xl mx-auto px-6 drop-shadow-lg font-medium text-balance break-keep"
                     >
                         営業現場で実際に使われているAI活用術をあなたの隣で即戦力に設定。
                         <br className="hidden md:block" />

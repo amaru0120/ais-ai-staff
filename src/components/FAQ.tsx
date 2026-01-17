@@ -70,7 +70,7 @@ export const FAQ = () => {
                         className="lg:w-1/2 text-center lg:text-left px-6"
                     >
                         <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4 text-balance break-keep">よくあるご質問</h2>
-                        <p className="text-gray-600 text-balance leading-relaxed">お客様からよくいただくご質問にお答えします。</p>
+                        <p className="text-gray-600 text-balance leading-relaxed break-keep">お客様からよくいただくご質問にお答えします。</p>
                     </motion.div>
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
@@ -123,7 +123,7 @@ export const FAQ = () => {
                         <h2 className="text-2xl md:text-5xl font-bold text-white mb-6 text-balance break-keep">
                             あなたの隣に、<span className="text-accent">最強のAI従業員</span>を。
                         </h2>
-                        <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto text-balance leading-relaxed">
+                        <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto text-balance leading-relaxed px-6 break-keep">
                             まずは30分の無料診断で、どの業務が自動化できるか確認してみませんか？
                         </p>
 

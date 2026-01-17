@@ -66,7 +66,7 @@ export const OnboardingSteps = () => {
                     <h2 className="text-3xl md:text-5xl font-bold text-primary mb-6 text-balance break-keep">
                         AIの採用は、<span className="text-accent">驚くほど簡単</span>です。
                     </h2>
-                    <p className="text-base md:text-lg text-gray-600 text-balance leading-relaxed">
+                    <p className="text-base md:text-lg text-gray-600 text-balance leading-relaxed break-keep">
                         アイズくんがあなたの職場に馴染むまでの、スムーズな5つのステップ。
                     </p>
                 </motion.div>

@@ -114,7 +114,7 @@ export const AIToolsGrid = () => {
                     <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4 text-balance break-keep">
                         レクチャー可能な<span className="text-accent">AI一覧</span>
                     </h2>
-                    <p className="text-base md:text-lg text-gray-600 text-balance leading-relaxed px-6">最新のAIツールを使いこなし、あなたのビジネスを加速させます。</p>
+                    <p className="text-base md:text-lg text-gray-600 text-balance leading-relaxed px-6 break-keep">最新のAIツールを使いこなし、あなたのビジネスを加速させます。</p>
                 </motion.div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
