@@ -12,7 +12,7 @@ export const Contact = () => {
                         viewport={{ once: true }}
                         className="text-center mb-16 px-6"
                     >
-                        <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4 text-balance">
+                        <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4 text-balance break-keep">
                             まずは<span className="text-accent">30分の無料診断</span>から
                         </h2>
                         <p className="text-base md:text-lg text-gray-600 text-balance leading-relaxed">

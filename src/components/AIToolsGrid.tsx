@@ -111,7 +111,7 @@ export const AIToolsGrid = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4 text-balance">
+                    <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4 text-balance break-keep">
                         レクチャー可能な<span className="text-accent">AI一覧</span>
                     </h2>
                     <p className="text-base md:text-lg text-gray-600 text-balance leading-relaxed px-6">最新のAIツールを使いこなし、あなたのビジネスを加速させます。</p>

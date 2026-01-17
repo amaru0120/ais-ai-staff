@@ -11,7 +11,7 @@ export const ProblemSolution = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight text-primary text-balance">
+                    <h2 className="text-2xl md:text-5xl font-bold mb-6 tracking-tight text-primary text-balance break-keep leading-snug">
                         2026年、AIを使わないことは
                         <br className="hidden md:block" />
                         <span className="text-red-600 block mt-2">「撤退」を意味します。</span>

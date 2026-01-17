@@ -13,8 +13,8 @@ export const Trust = () => {
                         className="flex flex-col items-center p-6 bg-white/5 rounded-2xl backdrop-blur-sm"
                     >
                         <Award className="w-12 h-12 text-accent mb-4" />
-                        <h3 className="text-xl font-bold mb-2">現役営業管理職</h3>
-                        <p className="text-gray-300 text-sm">現場で実際活用</p>
+                        <h3 className="text-xl font-bold mb-2 text-balance break-keep px-4">現役営業管理職</h3>
+                        <p className="text-gray-300 text-sm leading-relaxed px-4 text-balance break-keep">現場で実際活用</p>
                     </motion.div>
 
                     <motion.div
@@ -40,8 +40,8 @@ export const Trust = () => {
                             <span className="text-5xl font-black text-accent text-glow">100%</span>
                         </div>
 
-                        <h3 className="text-xl font-bold mb-2 relative z-10 text-balance px-4">全額返金保証</h3>
-                        <p className="text-gray-300 text-sm relative z-10 leading-relaxed px-4 text-balance">成果にご納得いただけない場合は全額返金</p>
+                        <h3 className="text-xl font-bold mb-2 relative z-10 text-balance break-keep px-4">全額返金保証</h3>
+                        <p className="text-gray-300 text-sm relative z-10 leading-relaxed px-4 text-balance break-keep">成果にご納得いただけない場合は全額返金</p>
 
                         {/* 装飾ライン */}
                         <div className="mt-4 w-24 h-1 bg-gradient-to-r from-transparent via-accent to-transparent rounded-full"></div>

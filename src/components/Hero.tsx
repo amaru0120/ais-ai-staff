@@ -26,9 +26,9 @@ export const Hero = () => {
                         animate={{ opacity: 1, y: 0 }}
                         className="drop-shadow-2xl"
                     >
-                        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 mx-auto max-w-6xl text-white text-balance">
+                        <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 mx-auto max-w-6xl text-white text-balance break-keep">
                             その『面倒』、AI従業員に<br className="hidden md:block" />
-                            <span className="text-accent text-glow block md:inline mt-2 md:mt-0 md:ml-3 text-glow-blue whitespace-nowrap text-2xl sm:text-3xl md:text-6xl lg:text-7xl">月給33,000円で任せませんか？</span>
+                            <span className="text-accent text-glow block md:inline mt-2 md:mt-0 md:ml-3 text-glow-blue whitespace-nowrap text-xl sm:text-2xl md:text-6xl lg:text-7xl">月給33,000円で任せませんか？</span>
                         </h1>
                     </motion.div>
 
