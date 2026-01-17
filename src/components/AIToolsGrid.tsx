@@ -135,14 +135,14 @@ export const AIToolsGrid = () => {
                 >
                     <button
                         onClick={() => setIsModalOpen(true)}
-                        className="relative inline-flex items-center gap-2 bg-gradient-to-r from-orange-400 to-pink-500 text-white px-6 md:px-8 py-4 rounded-full font-bold text-base md:text-lg shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 active:scale-95"
+                        className="relative inline-flex items-center gap-2 bg-gradient-to-r from-orange-400 to-pink-500 text-white px-10 py-5 rounded-full font-bold text-lg md:text-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 active:scale-95 group"
                     >
                         <span className="absolute -top-1 -right-1 flex h-4 w-4">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-4 w-4 bg-yellow-400"></span>
                         </span>
-                        <Sparkles className="w-5 h-5 flex-shrink-0" />
-                        <span>【実例】このサイトを制作した『AIスタメン』の全容を見る</span>
+                        <Sparkles className="w-6 h-6 flex-shrink-0 group-hover:rotate-12 transition-transform" />
+                        <span>【実はこのサイトも…】</span>
                     </button>
                 </motion.div>
 
@@ -182,29 +182,49 @@ export const AIToolsGrid = () => {
                             {/* Close Button */}
                             <button
                                 onClick={() => setIsModalOpen(false)}
-                                className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors bg-gray-100 rounded-full p-1"
+                                className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors bg-gray-100 rounded-full p-1 z-10"
                             >
                                 <X className="w-5 h-5" />
                             </button>
 
                             {/* Content */}
                             <div className="text-center">
-                                <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-full mb-6">
-                                    <Sparkles className="w-8 h-8 text-accent" />
+                                <div className="inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-accent/10 rounded-full mb-4 md:mb-6">
+                                    <Sparkles className="w-6 h-6 md:w-8 md:h-8 text-accent" />
                                 </div>
-                                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-6 leading-snug break-keep text-balance">
-                                    営業一筋・コード未経験者が<br className="hidden md:block" />
-                                    3日でサイトを作れた理由
+                                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 leading-snug text-balance">
+                                    戦略があれば、<br className="hidden md:block" />
+                                    技術の壁は超えられる
                                 </h3>
-                                <p className="text-gray-600 leading-relaxed text-balance text-left md:text-center text-sm md:text-base">
-                                    実はこのサイト、AIたちを『スタメン』として采配し、自ら実装しました。<br className="block my-2" />
-                                    技術がなくても、AIを使いこなせば、あなたのビジネスもここまで加速します。
+                                <p className="text-gray-600 leading-relaxed text-balance text-left md:text-center text-sm md:text-base mb-6">
+                                    実はこのサイト、私自身が以下のAIたちを『スタメン』として采配し、わずか3日で実装しました。<br className="hidden md:block" />
+                                    コードは一行も書いていません。AIを使いこなせば、あなたのビジネスもここまで加速できる。その実証例がこのサイトです。
                                 </p>
 
-                                <div className="mt-8">
+                                {/* AI Team List */}
+                                <div className="bg-gray-50 rounded-xl p-5 mb-8 text-left border border-gray-100 shadow-inner">
+                                    <h4 className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4 text-center">AIスタメン役割リスト</h4>
+                                    <ul className="space-y-3">
+                                        {[
+                                            { name: "Anti Gravity", role: "高速コーディング・サイト実装 担当" },
+                                            { name: "Claude", role: "戦略的ライティング・論理構築 担当" },
+                                            { name: "Gemini", role: "企画構成・アイデア出し 担当" },
+                                            { name: "Notebook LM", role: "膨大なナレッジの整理・要約 担当" },
+                                            { name: "Deep Research", role: "市場調査・競合分析 担当" },
+                                            { name: "NanoBanana", role: "デザイン要素・ビジュアル 担当" },
+                                        ].map((item, i) => (
+                                            <li key={i} className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3 text-sm border-b border-gray-200/50 last:border-0 pb-2 last:pb-0">
+                                                <span className="font-bold text-accent min-w-[120px]">{item.name}</span>
+                                                <span className="text-gray-700">{item.role}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+
+                                <div className="mt-2">
                                     <button
                                         onClick={() => setIsModalOpen(false)}
-                                        className="bg-primary text-white px-8 py-3 rounded-full font-bold text-sm hover:bg-primary/90 transition-colors"
+                                        className="bg-primary text-white px-8 py-3 rounded-full font-bold text-sm hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl active:scale-95 transform duration-150"
                                     >
                                         閉じる
                                     </button>
