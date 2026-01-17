@@ -197,7 +197,7 @@ export const AIToolsGrid = () => {
                                     技術の壁は超えられる
                                 </h3>
                                 <p className="text-gray-600 leading-relaxed text-balance text-left md:text-center text-sm md:text-base mb-6">
-                                    実はこのサイト、私自身が以下のAIたちを『スタメン』として采配し、わずか3日で実装しました。<br className="hidden md:block" />
+                                    実はこのサイト、営業一筋の私が以下のAIたちを『スタメン』として采配し、わずか3日で実装しました。<br className="hidden md:block" />
                                     コードは一行も書いていません。AIを使いこなせば、あなたのビジネスもここまで加速できる。その実証例がこのサイトです。
                                 </p>
 
