@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0A192F;
+  --color-secondary: #4A5568;
+  --color-accent: #007BFF;
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+  }
+
+  .btn-glow {
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.4);
+  }
+
+  .bg-gradient-radial {
+    background-image: radial-gradient(circle, var(--tw-gradient-stops));
+  }
+}
+
+body {
+  background-color: white;
+  color: var(--color-primary);
+  font-family: 'Inter', system-ui, sans-serif;
+}
