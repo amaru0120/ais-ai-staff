@@ -1,13 +1,15 @@
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { ProblemSolution } from './components/ProblemSolution';
+import { AIEmployeeConcept } from './components/AIEmployeeConcept';
+import { CaseStudies } from './components/CaseStudies';
+import { BeforeAfter } from './components/BeforeAfter';
 import { Service } from './components/Service';
+import { Trust, Footer } from './components/Trust';
 import { OnboardingSteps } from './components/OnboardingSteps';
 import { AIToolsGrid } from './components/AIToolsGrid';
 import { FAQ } from './components/FAQ';
-import { CaseStudies } from './components/CaseStudies';
 import { Contact } from './components/Contact';
-import { Trust, Footer } from './components/Trust';
 import { FloatingCTA } from './components/FloatingCTA';
 
 
@@ -17,13 +19,15 @@ function App() {
       <Navbar />
       <Hero />
       <ProblemSolution />
+      <AIEmployeeConcept />
+      <CaseStudies />
+      <BeforeAfter />
       <Service />
+      <Trust />
       <OnboardingSteps />
       <AIToolsGrid />
       <FAQ />
-      <CaseStudies />
       <Contact />
-      <Trust />
       <Footer />
       <FloatingCTA />
     </div>
