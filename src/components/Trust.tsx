@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ShieldCheck, Award } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
 
 export const Trust = () => {
     return (
@@ -35,8 +35,7 @@ export const Trust = () => {
                     <div className="mt-4 w-24 h-1 bg-gradient-to-r from-transparent via-accent to-transparent rounded-full"></div>
                 </motion.div>
             </div>
-        </div>
-        </section >
+        </section>
     );
 };
 
