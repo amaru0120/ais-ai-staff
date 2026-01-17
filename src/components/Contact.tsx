@@ -10,12 +10,12 @@ export const Contact = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-center mb-16 px-4"
+                        className="text-center mb-16 px-6"
                     >
-                        <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4 text-wrap-balance">
+                        <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4 text-balance">
                             まずは<span className="text-accent">30分の無料診断</span>から
                         </h2>
-                        <p className="text-base md:text-lg text-gray-600 text-wrap-balance">
+                        <p className="text-base md:text-lg text-gray-600 text-balance leading-relaxed">
                             あなたのビジネスに、AIがどう貢献できるか具体的に提案します。
                         </p>
                     </motion.div>

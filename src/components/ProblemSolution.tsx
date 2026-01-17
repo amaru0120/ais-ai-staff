@@ -11,13 +11,13 @@ export const ProblemSolution = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight text-primary text-wrap-balance">
+                    <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight text-primary text-balance">
                         2026年、AIを使わないことは
-                        <br className="md:hidden" />
+                        <br className="hidden md:block" />
                         <span className="text-red-600 block mt-2">「撤退」を意味します。</span>
                     </h2>
-                    <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto font-medium leading-relaxed text-wrap-balance">
-                        市場のスピードは加速し続けています。<br className="md:hidden" />
+                    <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto font-medium leading-relaxed text-balance">
+                        市場のスピードは加速し続けています。<br className="hidden md:block" />
                         人間だけの力では、もう追いつけません。
                     </p>
                 </motion.div>

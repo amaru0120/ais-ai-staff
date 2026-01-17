@@ -61,12 +61,12 @@ export const OnboardingSteps = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
-                    className="max-w-3xl mx-auto text-center mb-16 px-4"
+                    className="max-w-3xl mx-auto text-center mb-16 px-6"
                 >
-                    <h2 className="text-3xl md:text-5xl font-bold text-primary mb-6 text-wrap-balance">
+                    <h2 className="text-3xl md:text-5xl font-bold text-primary mb-6 text-balance">
                         AIの採用は、<span className="text-accent">驚くほど簡単</span>です。
                     </h2>
-                    <p className="text-base md:text-lg text-gray-600 text-wrap-balance">
+                    <p className="text-base md:text-lg text-gray-600 text-balance leading-relaxed">
                         アイズくんがあなたの職場に馴染むまでの、スムーズな5つのステップ。
                     </p>
                 </motion.div>
