@@ -1,0 +1,1 @@
+generated "busy_manager_schedule_calendar.png"
