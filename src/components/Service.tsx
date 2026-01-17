@@ -175,12 +175,11 @@ export const Service = () => {
                                 対応可能日時のご案内
                             </h3>
                             <p className="text-gray-600 leading-relaxed text-balance text-sm md:text-base px-6">
-                                現場実装の最前線で常に知見をアップデートし続けるため、平日は実務に専念しております。
-                                そのため、クライアント様との直接対話は、専念ができる
-                                <strong className="text-blue-700 font-bold mx-1 text-base md:text-lg block md:inline mt-1 md:mt-0">
-                                    【土曜・日曜・祝日】の完全予約制
-                                </strong>
-                                に限定させていただいております。
+                                <span className="font-bold text-gray-800 block mb-2 md:inline md:mb-0">
+                                    平日：現場実務に専念 ／ 休日：完全予約制サポート
+                                </span>
+                                <br className="hidden md:block" />
+                                実戦で磨いた知見を直接お届けするための、週末限定の体制です。
                             </p>
                         </div>
                     </div>
