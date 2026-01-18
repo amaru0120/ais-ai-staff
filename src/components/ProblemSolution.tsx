@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Clock, Calendar, TrendingDown } from 'lucide-react';
+import { HelpCircle, Layers, AlertTriangle } from 'lucide-react';
 
 export const ProblemSolution = () => {
     return (
@@ -11,31 +11,34 @@ export const ProblemSolution = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight text-primary text-balance leading-snug">
-                        毎日2時間の事務作業が、<br />
-                        会社の「稼ぐ時間」を奪っていませんか？
+                    <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight text-primary text-balance">
+                        AI、便利そうなのは分かるけど...<br />
+                        <span className="text-2xl md:text-4xl text-gray-500 mt-4 block">「結局、どれか正解なの？」</span>
                     </h2>
+                    <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto text-balance leading-relaxed">
+                        ChatGPT, Gemini, Claude, Perplexity... <br className="hidden md:block" />
+                        毎日のように現れる新ツール。選択肢が多すぎて、逆に動けなくなっていませんか？
+                    </p>
                 </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     {[
                         {
-                            icon: <Clock className="w-10 h-10 text-[#2563eb]" />,
-                            title: "毎日2時間の事務作業",
-                            desc: "メール返信、資料探し、日報作成... 日々繰り返される単純作業が、あなたの思考時間を削り取ります。",
+                            icon: <Layers className="w-10 h-10 text-blue-600" />,
+                            title: "選択肢が多すぎる",
+                            desc: "「このAIがすごい！」というニュースを見るたびに、また新しいツールが増えている。情報を追うだけで疲れてしまう。",
                             delay: 0
                         },
                         {
-                            icon: <Calendar className="w-10 h-10 text-[#2563eb]" />,
-                            title: "年間480時間の損失",
-                            desc: "その時間は本来、新しいお客様に会い、会社の未来戦略を練るための時間のはずでした。",
-                            highlight: "480時間",
+                            icon: <HelpCircle className="w-10 h-10 text-blue-600" />,
+                            title: "自社への「最適解」が不明",
+                            desc: "機能はすごいけど、それが「うちの不動産業務」や「製造現場」で具体的にどう役に立つのか？事例が専門的すぎて分からない。",
                             delay: 0.1
                         },
                         {
-                            icon: <TrendingDown className="w-10 h-10 text-[#2563eb]" />,
-                            title: "売上機会の損失",
-                            desc: "事務作業に時間を取られ、本来の経営・営業活動にお金と時間を投資できない悪循環。",
+                            icon: <AlertTriangle className="w-10 h-10 text-blue-600" />,
+                            title: "導入しても使われない不安",
+                            desc: "「とりあえずChatGPTを契約したけど、誰も使っていない...」ツール代だけが毎月消えていく、そんな失敗はしたくない。",
                             delay: 0.2
                         }
                     ].map((card, i) => (
@@ -46,26 +49,33 @@ export const ProblemSolution = () => {
                             viewport={{ once: true }}
                             transition={{ delay: card.delay }}
                             whileHover={{ y: -5 }}
-                            className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300"
+                            className="bg-gray-50 p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 relative overflow-hidden group"
                         >
-                            <div className="mb-6 p-4 bg-blue-50 rounded-full w-fit mx-auto md:mx-0">
+                            <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity transform group-hover:scale-110 duration-500">
+                                {card.icon}
+                            </div>
+                            <div className="mb-6 p-4 bg-white rounded-full w-fit shadow-sm text-blue-600">
                                 {card.icon}
                             </div>
                             <h3 className="text-xl font-bold text-gray-900 mb-4">{card.title}</h3>
                             <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                                {card.highlight ? (
-                                    <>
-                                        その時間は本来、新しいお客様に会い、<br className="hidden lg:block" />
-                                        <span className="text-[#2563eb] font-bold text-lg">{card.highlight}</span>
-                                        分、戦略を練るための時間のはずでした。
-                                    </>
-                                ) : (
-                                    card.desc
-                                )}
+                                {card.desc}
                             </p>
                         </motion.div>
                     ))}
                 </div>
+
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.4 }}
+                    className="text-center mt-12"
+                >
+                    <p className="text-xl md:text-2xl font-bold text-blue-600">
+                        その「迷い」、私たちが整理します。
+                    </p>
+                </motion.div>
             </div>
         </section>
     );

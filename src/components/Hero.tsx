@@ -6,16 +6,14 @@ export const Hero = () => {
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden text-white">
 
 
-            {/* Corporate Office Background Image */}
-            <div className="absolute inset-0 z-0">
-                <img
-                    src="/corporate-hero-bg.png"
-                    alt="Modern Corporate Office Boardroom"
-                    className="w-full h-full object-cover object-center"
-                />
-                {/* Blue/Primary Overlay for Trust & Readability */}
-                <div className="absolute inset-0 bg-primary/70 z-10 mix-blend-multiply" />
-                <div className="absolute inset-0 bg-black/20 z-10" />
+            {/* Complexity/Labyrinth Background */}
+            <div className="absolute inset-0 z-0 bg-[#0B1120]">
+                {/* Abstract Grid/Network Pattern to represent "Too many tools" */}
+                <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-20 bg-repeat" />
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-purple-900/40 to-black/80" />
+
+                {/* Spotlight effect for "Solution/Escape" */}
+                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/20 blur-[120px] rounded-full mix-blend-screen pointer-events-none" />
             </div>
 
             <div className="container mx-auto px-6 relative z-30">
@@ -26,9 +24,9 @@ export const Hero = () => {
                         animate={{ opacity: 1, y: 0 }}
                         className="drop-shadow-2xl"
                     >
-                        <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 mx-auto max-w-6xl text-white text-balance tracking-tight">
-                            毎日2時間の事務作業が、<br className="hidden md:block" />
-                            あなたの「稼ぐ時間」を奪っていませんか？
+                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8 mx-auto max-w-6xl text-white text-balance tracking-tight">
+                            「どのAIを使えばいいか、正直わからない。」<br />
+                            その迷いが、あなたのビジネスを停滞させていませんか？
                         </h1>
                     </motion.div>
 
@@ -37,11 +35,10 @@ export const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
-                        className="text-base sm:text-lg md:text-xl lg:text-2xl text-white mb-12 leading-relaxed max-w-4xl mx-auto px-6 drop-shadow-lg font-medium text-balance"
+                        className="text-base sm:text-lg md:text-xl text-gray-200 mb-12 leading-relaxed max-w-4xl mx-auto px-6 font-medium text-balance"
                     >
-                        月給33,000円から雇える、24時間働くAI従業員という選択肢。
-                        <br className="hidden md:block" />
-                        営業現場で実際に使われているAI活用術を、あなたの隣に配属します。
+                        ツールは溢れている。でも、自社に最適な『スタメン』が誰かは誰も教えてくれない。<br className="hidden md:block" />
+                        営業現場の視点で、あなたに今すぐ必要なAIの配属先（スタメン）を特定します。
                     </motion.p>
 
                     {/* CTA Button */}
@@ -54,10 +51,12 @@ export const Hero = () => {
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="bg-accent hover:bg-blue-500 text-white font-bold py-4 px-10 rounded-full text-lg md:text-xl flex items-center gap-3 btn-glow transition-all shadow-2xl hover:shadow-blue-500/50"
+                            className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold py-5 px-10 rounded-full text-lg md:text-xl flex items-center gap-3 shadow-2xl hover:shadow-blue-500/50 transition-all border border-blue-400/30"
                         >
-                            【無料】AI営業診断を予約する
-                            <ArrowRight className="w-6 h-6" />
+                            <span className="relative z-10">30分で解決する、AIスタメン診断を受ける</span>
+                            <ArrowRight className="w-6 h-6 relative z-10" />
+                            {/* Inner glow */}
+                            <div className="absolute inset-0 rounded-full bg-white/10 blur-md opacity-0 hover:opacity-100 transition-opacity" />
                         </motion.button>
                     </motion.div>
                 </div>
