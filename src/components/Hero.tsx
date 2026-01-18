@@ -6,14 +6,16 @@ export const Hero = () => {
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden text-white">
 
 
-            {/* Complexity/Labyrinth Background */}
-            <div className="absolute inset-0 z-0 bg-[#0B1120]">
-                {/* Abstract Grid/Network Pattern to represent "Too many tools" */}
-                <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-20 bg-repeat" />
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-purple-900/40 to-black/80" />
-
-                {/* Spotlight effect for "Solution/Escape" */}
-                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/20 blur-[120px] rounded-full mix-blend-screen pointer-events-none" />
+            {/* Corporate Office Background Image */}
+            <div className="absolute inset-0 z-0">
+                <img
+                    src="/corporate-hero-bg.png"
+                    alt="Modern Corporate Office Boardroom"
+                    className="w-full h-full object-cover object-center"
+                />
+                {/* Blue/Primary Overlay for Trust & Readability */}
+                <div className="absolute inset-0 bg-primary/70 z-10 mix-blend-multiply" />
+                <div className="absolute inset-0 bg-black/20 z-10" />
             </div>
 
             <div className="container mx-auto px-6 relative z-30">
