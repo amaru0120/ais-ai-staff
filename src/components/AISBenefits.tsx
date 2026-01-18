@@ -1,6 +1,6 @@
 
 import { motion } from 'framer-motion';
-import { Zap, MessageCircleQuestion, TrendingUp, ArrowRight } from 'lucide-react';
+import { Zap, MessageCircleQuestion, TrendingUp } from 'lucide-react';
 
 export const AISBenefits = () => {
     return (
