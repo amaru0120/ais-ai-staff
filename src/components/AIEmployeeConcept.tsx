@@ -44,7 +44,7 @@ export const AIEmployeeConcept = () => {
                                 <img
                                     src="/ais-creation.jpg"
                                     alt="資料作成・分析担当のアイズくん"
-                                    className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
+                                    className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500 contrast-[1.15] saturate-[1.15] brightness-[1.05]"
                                 />
                                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-emerald-900/80 to-transparent">
                                     <div className="flex items-center gap-2 text-white/90">
@@ -73,7 +73,7 @@ export const AIEmployeeConcept = () => {
                                 <img
                                     src="/ais-research.jpg"
                                     alt="リサーチ・情報収集担当のアイズくん"
-                                    className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
+                                    className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500 contrast-[1.15] saturate-[1.15] brightness-[1.05]"
                                 />
                                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-blue-900/80 to-transparent">
                                     <div className="flex items-center gap-2 text-white/90">
@@ -102,7 +102,7 @@ export const AIEmployeeConcept = () => {
                                 <img
                                     src="/ais-design.jpg"
                                     alt="クリエイティブ・図解担当のアイズくん"
-                                    className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
+                                    className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500 contrast-[1.15] saturate-[1.15] brightness-[1.05]"
                                 />
                                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-orange-900/80 to-transparent">
                                     <div className="flex items-center gap-2 text-white/90">
