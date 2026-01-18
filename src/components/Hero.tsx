@@ -26,9 +26,9 @@ export const Hero = () => {
                         animate={{ opacity: 1, y: 0 }}
                         className="drop-shadow-2xl"
                     >
-                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8 mx-auto max-w-6xl text-white text-balance tracking-tight">
-                            「どのAIを使えばいいか、正直わからない。」<br />
-                            その迷いが、あなたのビジネスを停滞させていませんか？
+                        <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8 mx-auto max-w-6xl text-white text-balance tracking-tight">
+                            「どのAIを使えばいいか、<br className="sm:hidden" />正直わからない。」<br className="hidden md:block" />
+                            その迷いが、あなたの<br className="sm:hidden" />ビジネスを停滞させていませんか？
                         </h1>
                     </motion.div>
 
@@ -37,7 +37,7 @@ export const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
-                        className="text-base sm:text-lg md:text-xl text-gray-200 mb-12 leading-relaxed max-w-4xl mx-auto px-6 font-medium text-balance"
+                        className="text-sm sm:text-base md:text-xl text-gray-100 mb-12 leading-relaxed max-w-4xl mx-auto px-4 font-medium text-balance drop-shadow-lg"
                     >
                         ツールは溢れている。でも、自社に最適な『スタメン』が誰かは誰も教えてくれない。<br className="hidden md:block" />
                         営業現場の視点で、あなたに今すぐ必要なAIの配属先（スタメン）を特定します。
