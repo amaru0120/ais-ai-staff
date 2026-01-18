@@ -114,7 +114,7 @@ export const Service = () => {
                         </div>
                         <h3 className="text-xl font-bold text-gray-900 mb-2">STEP 3：戦略顧問プラン</h3>
                         <div className="flex items-baseline gap-1 mb-6">
-                            <span className="text-4xl font-bold text-gray-900">550,000</span>
+                            <span className="text-4xl font-bold text-gray-900">330,000</span>
                             <span className="text-sm font-bold text-gray-500">円 /月</span>
                         </div>
                         <p className="text-sm text-gray-600 leading-relaxed mb-6 flex-grow">
