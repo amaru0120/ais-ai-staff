@@ -4,7 +4,7 @@ import { ProblemSolution } from './components/ProblemSolution';
 import { SocialContext } from './components/SocialContext';
 import { AIEmployeeConcept } from './components/AIEmployeeConcept';
 import { CaseStudies } from './components/CaseStudies';
-import { BeforeAfter } from './components/BeforeAfter';
+
 import { Service } from './components/Service';
 import { Trust, Footer } from './components/Trust';
 import { OnboardingSteps } from './components/OnboardingSteps';
@@ -23,7 +23,7 @@ function App() {
       <SocialContext />
       <AIEmployeeConcept />
       <CaseStudies />
-      <BeforeAfter />
+
       <Service />
       <Trust />
       <OnboardingSteps />
