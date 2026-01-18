@@ -6,42 +6,40 @@ export const Hero = () => {
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden text-white">
 
 
-            {/* Corporate Office Background Image */}
+            {/* Sophisticated Corporate Overlay */}
             <div className="absolute inset-0 z-0">
                 <img
                     src="/corporate-hero-bg.png"
                     alt="Modern Corporate Office Boardroom"
                     className="w-full h-full object-cover object-center"
                 />
-                {/* Blue/Primary Overlay for Trust & Readability */}
-                <div className="absolute inset-0 bg-primary/60 z-10 mix-blend-multiply" />
-                <div className="absolute inset-0 bg-black/50 z-10" />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#0f172a]/90 via-[#1e293b]/80 to-[#0f172a]/90 z-10 mix-blend-multiply" />
             </div>
 
-            <div className="container mx-auto px-6 relative z-30">
-                <div className="max-w-6xl mx-auto text-center relative">
+            <div className="container mx-auto px-6 relative z-30 pt-20 pb-32">
+                <div className="max-w-5xl mx-auto text-center relative">
                     {/* Headline */}
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="drop-shadow-2xl mb-10"
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        className="mb-12"
                     >
-                        {/* Main Copy: High Jump Rate */}
-                        <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black leading-tight mb-6 text-white text-balance tracking-tighter drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
+                        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8 text-white tracking-tight drop-shadow-2xl">
                             「どのAIを使えばいいか、<br className="sm:hidden" />正直わからない。」
                         </h1>
-                        {/* Secondary Copy */}
-                        <p className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-bold text-gray-200 mt-4 text-balance leading-relaxed drop-shadow-xl">
-                            その迷いが、あなたのビジネスを<br className="hidden sm:block" />停滞させていませんか？
+                        <p className="text-lg sm:text-xl md:text-3xl font-medium text-blue-100/90 leading-normal tracking-wide">
+                            その迷いが、あなたのビジネスを<br className="hidden sm:block" />
+                            <span className="text-white font-bold border-b-2 border-blue-400 pb-1">停滞させていませんか？</span>
                         </p>
                     </motion.div>
 
-                    {/* Subheadline: Smaller contrast */}
+                    {/* Subheadline */}
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.2 }}
-                        className="text-sm sm:text-base md:text-lg text-gray-200 mb-12 leading-relaxed max-w-4xl mx-auto px-4 font-medium text-balance drop-shadow-lg"
+                        transition={{ delay: 0.3, duration: 0.8 }}
+                        className="text-sm sm:text-base md:text-lg text-gray-300 mb-16 leading-loose max-w-3xl mx-auto font-normal tracking-wider"
                     >
                         ツールは溢れている。でも、自社に最適な『スタメン』が誰かは誰も教えてくれない。<br className="hidden md:block" />
                         営業現場の視点で、あなたに今すぐ必要なAIの配属先（スタメン）を特定します。
@@ -51,18 +49,21 @@ export const Hero = () => {
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.4 }}
-                        className="flex justify-center mt-12"
+                        transition={{ delay: 0.5 }}
+                        className="flex justify-center"
                     >
                         <motion.button
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold py-5 px-10 rounded-full text-lg md:text-xl flex items-center gap-3 shadow-2xl hover:shadow-blue-500/50 transition-all border border-blue-400/30"
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                            className="group relative bg-white text-[#0A192F] font-bold py-5 px-12 rounded-full text-lg md:text-xl flex items-center gap-4 shadow-[0_0_40px_rgba(255,255,255,0.3)] hover:shadow-[0_0_60px_rgba(255,255,255,0.5)] transition-all duration-300 overflow-hidden"
                         >
-                            <span className="relative z-10">30分で解決する、AIスタメン診断を受ける</span>
-                            <ArrowRight className="w-6 h-6 relative z-10" />
-                            {/* Inner glow */}
-                            <div className="absolute inset-0 rounded-full bg-white/10 blur-md opacity-0 hover:opacity-100 transition-opacity" />
+                            <span className="relative z-10 tracking-wider">30分で解決する、AIスタメン診断</span>
+                            <div className="relative z-10 bg-[#0A192F] rounded-full p-1">
+                                <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform" />
+                            </div>
+
+                            {/* Shine effect */}
+                            <div className="absolute top-0 -left-full w-1/2 h-full bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-[-20deg] group-hover:animate-shine" />
                         </motion.button>
                     </motion.div>
                 </div>
