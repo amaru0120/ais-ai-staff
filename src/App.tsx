@@ -22,10 +22,8 @@ function App() {
       <ProblemSolution />
       <SocialContext />
       <AIEmployeeConcept />
-      <AIEmployeeConcept />
       <AISBenefits />
 
-      <Service />
       <Service />
       <Trust />
       <OnboardingSteps />
