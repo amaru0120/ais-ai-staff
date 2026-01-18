@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { MessageSquare, Search, Image, FileText, Sparkles, Palette, BookOpen } from 'lucide-react';
+import { BOOKING_URL } from '../constants';
 
 interface AITool {
     name: string;
@@ -155,7 +156,9 @@ export const AIToolsGrid = () => {
                     className="text-center mt-16 mb-8"
                 >
                     <a
-                        href="#contact"
+                        href={BOOKING_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-block bg-accent text-white px-8 py-3 rounded-full font-bold transition-all hover:scale-105"
                     >
                         今すぐ無料診断を予約する

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { BOOKING_URL } from '../constants';
 
 export const Hero = () => {
     return (
@@ -52,10 +53,13 @@ export const Hero = () => {
                         transition={{ delay: 0.5 }}
                         className="flex justify-center"
                     >
-                        <motion.button
+                        <motion.a
+                            href={BOOKING_URL}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
-                            className="group relative bg-white text-[#0A192F] font-bold py-5 px-12 rounded-full text-lg md:text-xl flex items-center gap-4 shadow-[0_0_40px_rgba(255,255,255,0.3)] hover:shadow-[0_0_60px_rgba(255,255,255,0.5)] transition-all duration-300 overflow-hidden"
+                            className="group relative bg-white text-[#0A192F] font-bold py-5 px-12 rounded-full text-lg md:text-xl flex items-center gap-4 shadow-[0_0_40px_rgba(255,255,255,0.3)] hover:shadow-[0_0_60px_rgba(255,255,255,0.5)] transition-all duration-300 overflow-hidden cursor-pointer"
                         >
                             <span className="relative z-10 tracking-wider">30分で解決する、AIスタメン診断</span>
                             <div className="relative z-10 bg-[#0A192F] rounded-full p-1">
@@ -64,7 +68,7 @@ export const Hero = () => {
 
                             {/* Shine effect */}
                             <div className="absolute top-0 -left-full w-1/2 h-full bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-[-20deg] group-hover:animate-shine" />
-                        </motion.button>
+                        </motion.a>
                     </motion.div>
                 </div>
             </div>

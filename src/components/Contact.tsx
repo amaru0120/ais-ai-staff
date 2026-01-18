@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Mail, Phone, Calendar, Send } from 'lucide-react';
+import { BOOKING_URL } from '../constants';
 
 export const Contact = () => {
     return (
@@ -95,10 +96,10 @@ export const Contact = () => {
                                 </p>
 
                                 <div className="space-y-4 relative z-10">
-                                    <button className="w-full bg-accent hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-2xl flex items-center justify-center gap-3 transition-all hover:scale-[1.02] active:scale-95 btn-glow">
+                                    <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="w-full bg-accent hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-2xl flex items-center justify-center gap-3 transition-all hover:scale-[1.02] active:scale-95 btn-glow">
                                         <Calendar className="w-5 h-5" />
                                         カレンダーから予約
-                                    </button>
+                                    </a>
                                     <button className="w-full bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-2xl flex items-center justify-center gap-3 border border-white/10 transition-all">
                                         <Send className="w-5 h-5" />
                                         メールで問い合わせ

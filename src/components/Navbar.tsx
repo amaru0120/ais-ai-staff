@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import { BOOKING_URL } from '../constants';
 
 export const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -47,7 +48,9 @@ export const Navbar = () => {
                         </a>
                     ))}
                     <a
-                        href="#contact"
+                        href={BOOKING_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="bg-accent text-white px-6 py-2 rounded-full text-sm font-bold hover:bg-accent/90 transition-all hover:scale-105 active:scale-95 btn-glow"
                     >
                         無料診断を予約
@@ -84,7 +87,9 @@ export const Navbar = () => {
                                 </a>
                             ))}
                             <a
-                                href="#contact"
+                                href={BOOKING_URL}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="bg-accent text-white text-center py-4 rounded-xl font-bold mt-4"
                             >

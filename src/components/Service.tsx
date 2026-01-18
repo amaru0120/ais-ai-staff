@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Check, ArrowRight, Calendar } from 'lucide-react';
+import { BOOKING_URL } from '../constants';
 
 export const Service = () => {
     return (
@@ -93,9 +94,9 @@ export const Service = () => {
                                 <span>最新ツール情報提供</span>
                             </li>
                         </ul>
-                        <button className="w-full py-4 rounded-xl bg-blue-600 text-white font-bold text-base hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg flex items-center justify-center gap-2">
+                        <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="w-full py-4 rounded-xl bg-blue-600 text-white font-bold text-base hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg flex items-center justify-center gap-2">
                             詳細を見る <ArrowRight className="w-4 h-4" />
-                        </button>
+                        </a>
                     </motion.div>
 
                     {/* STEP 3 */}
