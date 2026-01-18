@@ -14,30 +14,34 @@ export const Hero = () => {
                     className="w-full h-full object-cover object-center"
                 />
                 {/* Blue/Primary Overlay for Trust & Readability */}
-                <div className="absolute inset-0 bg-primary/70 z-10 mix-blend-multiply" />
-                <div className="absolute inset-0 bg-black/20 z-10" />
+                <div className="absolute inset-0 bg-primary/60 z-10 mix-blend-multiply" />
+                <div className="absolute inset-0 bg-black/50 z-10" />
             </div>
 
             <div className="container mx-auto px-6 relative z-30">
-                <div className="max-w-5xl mx-auto text-center relative">
+                <div className="max-w-6xl mx-auto text-center relative">
                     {/* Headline */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="drop-shadow-2xl"
+                        className="drop-shadow-2xl mb-10"
                     >
-                        <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8 mx-auto max-w-6xl text-white text-balance tracking-tight">
-                            「どのAIを使えばいいか、<br className="sm:hidden" />正直わからない。」<br className="hidden md:block" />
-                            その迷いが、あなたの<br className="sm:hidden" />ビジネスを停滞させていませんか？
+                        {/* Main Copy: High Jump Rate */}
+                        <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black leading-tight mb-6 text-white text-balance tracking-tighter drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
+                            「どのAIを使えばいいか、<br className="sm:hidden" />正直わからない。」
                         </h1>
+                        {/* Secondary Copy */}
+                        <p className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-bold text-gray-200 mt-4 text-balance leading-relaxed drop-shadow-xl">
+                            その迷いが、あなたのビジネスを<br className="hidden sm:block" />停滞させていませんか？
+                        </p>
                     </motion.div>
 
-                    {/* Subheadline */}
+                    {/* Subheadline: Smaller contrast */}
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
-                        className="text-sm sm:text-base md:text-xl text-gray-100 mb-12 leading-relaxed max-w-4xl mx-auto px-4 font-medium text-balance drop-shadow-lg"
+                        className="text-sm sm:text-base md:text-lg text-gray-200 mb-12 leading-relaxed max-w-4xl mx-auto px-4 font-medium text-balance drop-shadow-lg"
                     >
                         ツールは溢れている。でも、自社に最適な『スタメン』が誰かは誰も教えてくれない。<br className="hidden md:block" />
                         営業現場の視点で、あなたに今すぐ必要なAIの配属先（スタメン）を特定します。
