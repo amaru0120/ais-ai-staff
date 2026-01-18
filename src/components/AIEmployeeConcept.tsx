@@ -13,11 +13,11 @@ export const AIEmployeeConcept = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight text-primary text-balance leading-snug">
-                        「ツール導入」ではなく、<br />
-                        業務ごとに適した「AI従業員」とチームを一緒に作り上げる。
+                    <h2 className="text-3xl md:text-5xl font-bold mb-8 tracking-tight text-[#0A192F] text-balance leading-snug">
+                        「ツール導入」ではなく、<br className="hidden md:block" />
+                        業務ごとに適した「AI従業員」と<br className="sm:hidden" />チームを一緒に作り上げる。
                     </h2>
-                    <p className="text-gray-600 text-base md:text-lg max-w-3xl mx-auto text-balance leading-relaxed">
+                    <p className="text-gray-600 text-base md:text-lg max-w-3xl mx-auto text-balance leading-loose font-medium mb-16">
                         私たちが提供するのは、単なるソフトウェアの操作説明ではありません。<br className="hidden md:block" />
                         御社の業務を深く理解し、適材適所に配属された「AI従業員」が、<br className="hidden md:block" />
                         不平不満なく24時間働き続ける「最強のチーム」を、あなたと共に構築します。

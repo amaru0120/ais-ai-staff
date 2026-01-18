@@ -11,13 +11,13 @@ export const ProblemSolution = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight text-primary text-balance">
-                        AI、便利そうなのは分かるけど...<br />
-                        <span className="text-2xl md:text-4xl text-gray-500 mt-4 block">「結局、どれか正解なの？」</span>
+                    <h2 className="text-3xl md:text-5xl font-bold mb-8 tracking-tight text-[#0A192F] text-balance leading-tight">
+                        AI、便利そうなのは分かるけど...<br className="hidden md:block" />
+                        <span className="text-2xl md:text-4xl text-gray-500 mt-4 block font-medium">「結局、どれか正解なの？」</span>
                     </h2>
-                    <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto text-balance leading-relaxed">
+                    <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto text-balance leading-loose font-medium">
                         ChatGPT, Gemini, Claude, Perplexity... <br className="hidden md:block" />
-                        毎日のように現れる新ツール。選択肢が多すぎて、逆に動けなくなっていませんか？
+                        毎日のように現れる新ツール。選択肢が多すぎて、<br className="sm:hidden" />逆に動けなくなっていませんか？
                     </p>
                 </motion.div>
 

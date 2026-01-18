@@ -64,7 +64,7 @@ export const Service = () => {
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
                         whileHover={{ y: -8 }}
-                        className="bg-white p-10 rounded-3xl border-2 border-blue-600 shadow-xl hover:shadow-2xl transition-all duration-300 relative flex flex-col z-10 scale-105"
+                        className="bg-white p-10 rounded-3xl border-2 border-blue-600 shadow-xl hover:shadow-2xl transition-all duration-300 relative flex flex-col z-10 md:scale-105"
                     >
                         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                             <span className="bg-yellow-400 text-gray-900 px-6 py-1.5 rounded-full text-sm font-bold shadow-sm">
