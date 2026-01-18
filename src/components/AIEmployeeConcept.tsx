@@ -14,8 +14,8 @@ export const AIEmployeeConcept = () => {
                     className="text-center mb-16"
                 >
                     <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight text-primary text-balance leading-snug">
-                        「ツール」ではなく、<br />
-                        「従業員」としてAIを迎える。
+                        「ツール導入」ではなく、<br />
+                        「AI従業員」を一緒に作り上げる。
                     </h2>
                 </motion.div>
 
