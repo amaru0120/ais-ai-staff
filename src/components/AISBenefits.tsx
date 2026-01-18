@@ -1,4 +1,4 @@
-```
+
 import { motion } from 'framer-motion';
 import { Zap, MessageCircleQuestion, TrendingUp, ArrowRight } from 'lucide-react';
 
@@ -6,9 +6,9 @@ export const AISBenefits = () => {
     return (
         <section className="py-24 bg-gradient-to-b from-gray-50 to-white overflow-hidden text-gray-800">
             <div className="container mx-auto px-6">
-                
+
                 {/* Header */}
-                <motion.div 
+                <motion.div
                     initial={{ opacity: 0, y: 15 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -32,7 +32,7 @@ export const AISBenefits = () => {
                 {/* 3 Benefits Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     {/* Merit 1 */}
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -40,7 +40,7 @@ export const AISBenefits = () => {
                         className="group bg-white p-8 md:p-10 rounded-3xl border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden"
                     >
                         <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity transform group-hover:scale-110 duration-500">
-                             <Zap className="w-24 h-24 text-blue-600" />
+                            <Zap className="w-24 h-24 text-blue-600" />
                         </div>
                         <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center text-white mb-8 shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform duration-300">
                             <Zap className="w-8 h-8" />
@@ -54,15 +54,15 @@ export const AISBenefits = () => {
                     </motion.div>
 
                     {/* Merit 2 */}
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
                         className="group bg-white p-8 md:p-10 rounded-3xl border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden"
                     >
-                         <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity transform group-hover:scale-110 duration-500">
-                             <MessageCircleQuestion className="w-24 h-24 text-indigo-600" />
+                        <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity transform group-hover:scale-110 duration-500">
+                            <MessageCircleQuestion className="w-24 h-24 text-indigo-600" />
                         </div>
                         <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center text-white mb-8 shadow-lg shadow-indigo-500/30 group-hover:scale-110 transition-transform duration-300">
                             <MessageCircleQuestion className="w-8 h-8" />
@@ -76,15 +76,15 @@ export const AISBenefits = () => {
                     </motion.div>
 
                     {/* Merit 3 */}
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.3 }}
                         className="group bg-white p-8 md:p-10 rounded-3xl border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden"
                     >
-                         <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity transform group-hover:scale-110 duration-500">
-                             <TrendingUp className="w-24 h-24 text-teal-600" />
+                        <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity transform group-hover:scale-110 duration-500">
+                            <TrendingUp className="w-24 h-24 text-teal-600" />
                         </div>
                         <div className="w-16 h-16 bg-gradient-to-br from-teal-400 to-emerald-500 rounded-2xl flex items-center justify-center text-white mb-8 shadow-lg shadow-teal-500/30 group-hover:scale-110 transition-transform duration-300">
                             <TrendingUp className="w-8 h-8" />
