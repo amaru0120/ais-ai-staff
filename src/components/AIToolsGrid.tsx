@@ -1,103 +1,126 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
-import { MessageSquare, Search, Image, FileText, Sparkles, X } from 'lucide-react';
+import { MessageSquare, Search, Image, FileText, Sparkles, X, Palette, BookOpen } from 'lucide-react';
 
 interface AITool {
     name: string;
     category: string;
-    benefit: string;
-    comment: string;
+    usage: string;
+    feature: string;
     icon: React.ReactNode;
-    color: string;
+    colorBase: string; // Tailwind color name like 'blue', 'orange'
 }
 
 const aiTools: AITool[] = [
     {
         name: "Gemini",
         category: "テキスト生成",
-        benefit: "文章作成・メール自動化",
-        comment: "Googleの最新AI！長文も得意です",
+        usage: "文章作成・メール自動化",
+        feature: "Googleの威力 / 長文も得意です",
         icon: <Sparkles className="w-6 h-6" />,
-        color: "from-blue-500 to-purple-600"
+        colorBase: "blue"
     },
     {
         name: "ChatGPT",
         category: "テキスト生成",
-        benefit: "文章作成・メール自動化",
-        comment: "定番中の定番。使いやすさNo.1",
+        usage: "文章作成・メール自動化",
+        feature: "定番中の定番。使いやすさNo.1",
         icon: <MessageSquare className="w-6 h-6" />,
-        color: "from-green-500 to-teal-600"
+        colorBase: "blue"
     },
     {
         name: "Claude",
         category: "テキスト生成",
-        benefit: "文章作成・メール自動化",
-        comment: "丁寧で正確な回答が魅力です",
+        usage: "文章作成・メール自動化",
+        feature: "丁寧で正確な回答が魅力です",
         icon: <MessageSquare className="w-6 h-6" />,
-        color: "from-orange-500 to-red-600"
+        colorBase: "blue"
     },
     {
         name: "Perplexity",
         category: "リサーチ",
-        benefit: "最新情報の高速検索",
-        comment: "リアルタイム検索ならこれ！",
+        usage: "最新情報の高速検索",
+        feature: "リアルタイム検索ならこれ！",
         icon: <Search className="w-6 h-6" />,
-        color: "from-cyan-500 to-blue-600"
+        colorBase: "cyan"
     },
     {
         name: "NanoBanana",
         category: "画像生成",
-        benefit: "プロ級の図解・宣伝画像",
-        comment: "日本語に強い画像生成AI",
+        usage: "プロ級の図解・宣伝画像",
+        feature: "日本語に強い速度主義AI",
         icon: <Image className="w-6 h-6" />,
-        color: "from-yellow-500 to-orange-600"
+        colorBase: "orange"
     },
     {
         name: "Midjourney",
         category: "画像生成",
-        benefit: "プロ級の図解・宣伝画像",
-        comment: "圧倒的なクオリティで人気",
-        icon: <Image className="w-6 h-6" />,
-        color: "from-pink-500 to-purple-600"
+        usage: "プロ級の図解・宣伝画像",
+        feature: "圧倒的なクオリティで人気",
+        icon: <Palette className="w-6 h-6" />,
+        colorBase: "orange"
     },
     {
         name: "Notebook LM",
         category: "資料作成",
-        benefit: "スライド・Webサイトの自動生成",
-        comment: "資料を読み込んで要約も可能",
-        icon: <FileText className="w-6 h-6" />,
-        color: "from-indigo-500 to-blue-600"
+        usage: "スライド・Webサイトの自動生成",
+        feature: "資料を読み込んで要約を可能",
+        icon: <BookOpen className="w-6 h-6" />,
+        colorBase: "green"
     },
     {
         name: "Gamma",
         category: "資料作成",
-        benefit: "スライド・Webサイトの自動生成",
-        comment: "美しいプレゼン資料が一瞬で",
+        usage: "スライド・Webサイトの自動生成",
+        feature: "美しいプレゼン資料が一瞬で",
         icon: <FileText className="w-6 h-6" />,
-        color: "from-violet-500 to-purple-600"
+        colorBase: "green"
     }
 ];
 
 const AIToolCard = ({ tool, index }: { tool: AITool; index: number }) => {
+    // Helper to get color classes safely
+    const getColorClasses = (base: string) => {
+        switch (base) {
+            case 'blue': return { bg: 'bg-blue-50', text: 'text-blue-600', border: 'border-blue-100', iconBg: 'bg-blue-100' };
+            case 'orange': return { bg: 'bg-orange-50', text: 'text-orange-600', border: 'border-orange-100', iconBg: 'bg-orange-100' };
+            case 'cyan': return { bg: 'bg-cyan-50', text: 'text-cyan-600', border: 'border-cyan-100', iconBg: 'bg-cyan-100' };
+            case 'green': return { bg: 'bg-green-50', text: 'text-green-600', border: 'border-green-100', iconBg: 'bg-green-100' };
+            default: return { bg: 'bg-gray-50', text: 'text-gray-600', border: 'border-gray-100', iconBg: 'bg-gray-100' };
+        }
+    };
+
+    const colors = getColorClasses(tool.colorBase);
+
     return (
         <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.05, duration: 0.4 }}
-            className="group relative bg-white rounded-xl p-5 shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+            className={`group relative bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all border ${colors.border} flex flex-col h-full`}
         >
-            <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${tool.color} rounded-t-xl`}></div>
-            <div className={`mb-4 w-12 h-12 rounded-lg bg-gradient-to-br ${tool.color} flex items-center justify-center text-white shadow-sm`}>
-                {tool.icon}
+            <div className="flex items-center gap-4 mb-4">
+                <div className={`w-12 h-12 rounded-xl ${colors.iconBg} ${colors.text} flex items-center justify-center`}>
+                    {tool.icon}
+                </div>
+                <div>
+                    <h3 className="text-lg font-bold text-gray-900">{tool.name}</h3>
+                    <div className={`text-xs font-bold ${colors.text} uppercase tracking-wider`}>{tool.category}</div>
+                </div>
             </div>
-            <h3 className="text-xl font-bold text-primary mb-1">{tool.name}</h3>
-            <div className="text-accent text-xs font-bold mb-2 uppercase tracking-wider">{tool.category}</div>
-            <p className="text-gray-600 text-sm mb-3 leading-relaxed">{tool.benefit}</p>
-            <div className="pt-3 border-t border-gray-50 flex items-start gap-2">
-                <MessageSquare className="w-4 h-4 text-accent/40 mt-0.5" />
-                <p className="text-xs text-gray-500 italic">{tool.comment}</p>
+
+            <p className="text-gray-600 text-sm mb-4 leading-relaxed flex-grow">
+                <span className="font-bold text-gray-700 block mb-1 text-xs opacity-80">用途:</span>
+                {tool.usage}
+            </p>
+
+            <div className={`mt-auto p-3 rounded-xl ${colors.bg} border border-opacity-50 ${colors.border}`}>
+                <p className={`text-xs font-bold ${colors.text}`}>
+                    <span className="block opacity-70 text-[10px] mb-0.5">特徴</span>
+                    {tool.feature}
+                </p>
             </div>
         </motion.div>
     );
@@ -107,7 +130,7 @@ export const AIToolsGrid = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
-        <section id="ai-tools" className="py-20 bg-white relative overflow-hidden">
+        <section id="ai-tools" className="py-24 bg-white relative overflow-hidden">
             <div className="container mx-auto px-6 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 15 }}
@@ -115,13 +138,15 @@ export const AIToolsGrid = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4 text-balance">
-                        レクチャー可能な<span className="text-accent">AI一覧</span>
+                    <h2 className="text-3xl md:text-5xl font-bold text-primary mb-6 text-balance">
+                        レクチャー可能な<span className="text-blue-600">AI一覧</span>
                     </h2>
-                    <p className="text-base md:text-lg text-gray-600 text-balance leading-relaxed px-6">最新のAIツールを使いこなし、あなたのビジネスを加速させます。</p>
+                    <p className="text-base md:text-lg text-gray-600 text-balance leading-relaxed px-6 font-medium">
+                        最新のAIツールを使いこなし、あなたのビジネスを加速させます。
+                    </p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-7xl mx-auto">
                     {aiTools.map((tool, index) => (
                         <AIToolCard key={index} tool={tool} index={index} />
                     ))}
@@ -131,7 +156,7 @@ export const AIToolsGrid = () => {
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-center mt-12 mb-8"
+                    className="text-center mt-16 mb-8"
                 >
                     <button
                         onClick={() => setIsModalOpen(true)}
@@ -145,23 +170,9 @@ export const AIToolsGrid = () => {
                         <span>【実はこのサイトも…】</span>
                     </button>
                 </motion.div>
-
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.4 }}
-                    className="text-center mt-16"
-                >
-                    <a
-                        href="#contact"
-                        className="inline-block bg-accent text-white px-8 py-3 rounded-full font-bold transition-all hover:scale-105"
-                    >
-                        今すぐ無料診断を予約する
-                    </a>
-                </motion.div>
             </div>
-            {/* Modal Overlay - Portalled to body to escape overflow/z-index issues */}
+
+            {/* Modal Overlay */}
             {isModalOpen && createPortal(
                 <AnimatePresence>
                     <motion.div
@@ -189,8 +200,8 @@ export const AIToolsGrid = () => {
 
                             {/* Content */}
                             <div className="text-center">
-                                <div className="inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-accent/10 rounded-full mb-4 md:mb-6">
-                                    <Sparkles className="w-6 h-6 md:w-8 md:h-8 text-accent" />
+                                <div className="inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-blue-100 rounded-full mb-4 md:mb-6">
+                                    <Sparkles className="w-6 h-6 md:w-8 md:h-8 text-blue-600" />
                                 </div>
                                 <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 leading-snug text-balance">
                                     戦略があれば、<br className="hidden md:block" />
@@ -214,7 +225,7 @@ export const AIToolsGrid = () => {
                                             { name: "NanoBanana", role: "デザイン要素・ビジュアル 担当" },
                                         ].map((item, i) => (
                                             <li key={i} className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3 text-sm border-b border-gray-200/50 last:border-0 pb-2 last:pb-0">
-                                                <span className="font-bold text-accent min-w-[120px]">{item.name}</span>
+                                                <span className="font-bold text-blue-600 min-w-[120px]">{item.name}</span>
                                                 <span className="text-gray-700">{item.role}</span>
                                             </li>
                                         ))}
@@ -224,7 +235,7 @@ export const AIToolsGrid = () => {
                                 <div className="mt-2">
                                     <button
                                         onClick={() => setIsModalOpen(false)}
-                                        className="bg-primary text-white px-8 py-3 rounded-full font-bold text-sm hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl active:scale-95 transform duration-150"
+                                        className="bg-blue-600 text-white px-8 py-3 rounded-full font-bold text-sm hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl active:scale-95 transform duration-150"
                                     >
                                         閉じる
                                     </button>
