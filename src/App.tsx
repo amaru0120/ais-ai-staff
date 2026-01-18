@@ -3,7 +3,7 @@ import { Hero } from './components/Hero';
 import { ProblemSolution } from './components/ProblemSolution';
 import { SocialContext } from './components/SocialContext';
 import { AIEmployeeConcept } from './components/AIEmployeeConcept';
-import { CaseStudies } from './components/CaseStudies';
+import { AISBenefits } from './components/AISBenefits';
 
 import { Service } from './components/Service';
 import { Trust, Footer } from './components/Trust';
@@ -22,8 +22,10 @@ function App() {
       <ProblemSolution />
       <SocialContext />
       <AIEmployeeConcept />
-      <CaseStudies />
+      <AIEmployeeConcept />
+      <AISBenefits />
 
+      <Service />
       <Service />
       <Trust />
       <OnboardingSteps />
