@@ -188,12 +188,7 @@ export const AIEmployeeConcept = () => {
                 </motion.div>
 
                 {/* Production Secret Modal Trigger (Bottom) */}
-                <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="text-center mt-16"
-                >
+                <div className="text-center mt-16">
                     <button
                         onClick={() => setIsModalOpen(true)}
                         className="relative inline-flex items-center gap-2 bg-gradient-to-r from-orange-400 to-pink-500 text-white px-10 py-5 rounded-full font-bold text-lg md:text-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 active:scale-95 group"
