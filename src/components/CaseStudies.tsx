@@ -53,7 +53,7 @@ export const CaseStudies = () => {
     };
 
     return (
-        <section className="py-24 bg-gray-50 overflow-hidden">
+        <section className="hidden md:block py-24 bg-gray-50 overflow-hidden">
             <div className="container mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 15 }}
