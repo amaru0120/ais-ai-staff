@@ -30,20 +30,7 @@ export const AIEmployeeConcept = () => {
                         不平不満なく24時間働き続ける「最強のチーム」を、あなたと共に構築します。
                     </p>
 
-                    {/* Production Secret Modal Trigger */}
-                    <div className="mt-12">
-                        <button
-                            onClick={() => setIsModalOpen(true)}
-                            className="relative inline-flex items-center gap-2 bg-gradient-to-r from-orange-400 to-pink-500 text-white px-10 py-5 rounded-full font-bold text-lg md:text-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 active:scale-95 group"
-                        >
-                            <span className="absolute -top-1 -right-1 flex h-4 w-4">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
-                                <span className="relative inline-flex rounded-full h-4 w-4 bg-yellow-400"></span>
-                            </span>
-                            <Sparkles className="w-6 h-6 flex-shrink-0 group-hover:rotate-12 transition-transform" />
-                            <span>【実はこのサイトも…】</span>
-                        </button>
-                    </div>
+
                 </motion.div>
 
                 {/* 3 Specialist Staff Cards */}
@@ -198,6 +185,26 @@ export const AIEmployeeConcept = () => {
                             </div>
                         </div>
                     </div>
+                </motion.div>
+
+                {/* Production Secret Modal Trigger (Bottom) */}
+                <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="text-center mt-16"
+                >
+                    <button
+                        onClick={() => setIsModalOpen(true)}
+                        className="relative inline-flex items-center gap-2 bg-gradient-to-r from-orange-400 to-pink-500 text-white px-10 py-5 rounded-full font-bold text-lg md:text-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 active:scale-95 group"
+                    >
+                        <span className="absolute -top-1 -right-1 flex h-4 w-4">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-4 w-4 bg-yellow-400"></span>
+                        </span>
+                        <Sparkles className="w-6 h-6 flex-shrink-0 group-hover:rotate-12 transition-transform" />
+                        <span>【実はこのサイトも…】</span>
+                    </button>
                 </motion.div>
 
             </div>
