@@ -200,7 +200,7 @@ export const AIEmployeeConcept = () => {
                         <Sparkles className="w-6 h-6 flex-shrink-0 group-hover:rotate-12 transition-transform" />
                         <span>【実はこのサイトも…】</span>
                     </button>
-                </motion.div>
+                </div>
 
             </div>
 
