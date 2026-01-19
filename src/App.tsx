@@ -4,7 +4,6 @@ import { ProblemSolution } from './components/ProblemSolution';
 import { SocialContext } from './components/SocialContext';
 import { AIEmployeeConcept } from './components/AIEmployeeConcept';
 import { AISBenefits } from './components/AISBenefits';
-import { CaseStudies } from './components/CaseStudies';
 
 import { Service } from './components/Service';
 import { Trust, Footer } from './components/Trust';
@@ -24,7 +23,6 @@ function App() {
       <SocialContext />
       <AIEmployeeConcept />
       <AISBenefits />
-      <CaseStudies />
 
 
       <Service />
