@@ -1,188 +1,196 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
-import { Clock, CheckCircle, TrendingDown, Users, FileText, Search, PenTool, Sparkles, X } from 'lucide-react';
+import { Clock, CheckCircle, TrendingDown, Users, User, ArrowDown, FileText, Search, PenTool, Sparkles, X } from 'lucide-react';
 
 export const AIEmployeeConcept = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     return (
-        <section className="py-24 bg-gradient-to-b from-white to-gray-50 overflow-hidden text-gray-800">
-            <div className="container mx-auto px-6">
+        <section className="py-24 bg-slate-50 relative overflow-hidden text-gray-800">
+            {/* Background Grid Pattern */}
+            <div className="absolute inset-0 z-0 opacity-[0.03]"
+                style={{
+                    backgroundImage: 'radial-gradient(#444 1px, transparent 1px)',
+                    backgroundSize: '24px 24px'
+                }}
+            />
+
+            <div className="container mx-auto px-6 relative z-10">
 
                 {/* Section Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 15 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-center mb-20"
+                    className="text-center mb-24"
                 >
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 mb-8 self-center">
                         <Users className="w-4 h-4 text-blue-600" />
                         <span className="text-sm font-bold text-blue-600 tracking-wide">AIチーム構築</span>
                     </div>
-                    <h2 className="text-3xl md:text-5xl font-bold mb-8 tracking-tight text-[#0A192F] text-balance leading-tight">
-                        「ツール導入」ではなく、<br className="hidden md:block" />
-                        業務ごとに適した「AI従業員」と<br className="sm:hidden" />チームを一緒に作り上げる。
-                    </h2>
-                    <p className="text-gray-600 text-base md:text-lg max-w-3xl mx-auto text-balance leading-loose font-medium">
-                        私たちが提供するのは、単なるソフトウェアの操作説明ではありません。<br className="hidden md:block" />
-                        御社の業務を深く理解し、適材適所に配属された「AI従業員」が、<br className="hidden md:block" />
-                        不平不満なく24時間働き続ける「最強のチーム」を、あなたと共に構築します。
-                    </p>
 
+                    <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16">
+                        <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-[#0A192F] text-balance leading-tight text-left">
+                            「バラバラのツール」ではなく<br />
+                            <span className="text-blue-600">「一丸となって働くチーム」</span>へ。
+                        </h2>
 
+                        <div className="bg-white/80 backdrop-blur border border-blue-100 p-6 rounded-2xl shadow-sm max-w-md text-left relative overflow-hidden group">
+                            <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                                <Users className="w-24 h-24 text-blue-600" />
+                            </div>
+                            <p className="text-gray-500 text-xs font-bold tracking-widest mb-1">COST PERFORMANCE</p>
+                            <p className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight">
+                                コストはパート1人と同等。<br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">戦力は、無限大。</span>
+                            </p>
+                        </div>
+                    </div>
                 </motion.div>
 
-                {/* 3 Specialist Staff Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-20">
-                    {/* Staff 1: Creation (Green) */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.1 }}
-                        className="group relative"
-                    >
-                        <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-emerald-500/10 rounded-2xl transform group-hover:scale-[1.02] transition-transform duration-300" />
-                        <div className="relative bg-white p-2 rounded-2xl border border-emerald-100 shadow-sm overflow-hidden">
-                            <div className="bg-gradient-to-br from-emerald-50 to-white rounded-xl overflow-hidden aspect-[4/5] relative mb-4">
-                                <img
-                                    src="/ais-creation.jpg"
-                                    alt="資料作成・分析担当のアイズくん"
-                                    className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500 contrast-[1.15] saturate-[1.15] brightness-[1.05]"
-                                />
-                                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-emerald-900/80 to-transparent">
-                                    <div className="flex items-center gap-2 text-white/90">
-                                        <FileText className="w-4 h-4" />
-                                        <span className="text-xs font-bold tracking-wider">ANALYST</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <h3 className="text-xl font-bold text-center text-gray-900 py-2 border-b-2 border-emerald-500 inline-block w-full">
-                                資料作成・分析 担当
-                            </h3>
-                        </div>
-                    </motion.div>
+                {/* Organizational Chart Diagram */}
+                <div className="max-w-5xl mx-auto mb-24 relative">
 
-                    {/* Staff 2: Research (Blue) */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.2 }}
-                        className="group relative"
-                    >
-                        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-blue-500/10 rounded-2xl transform group-hover:scale-[1.02] transition-transform duration-300" />
-                        <div className="relative bg-white p-2 rounded-2xl border border-blue-100 shadow-sm overflow-hidden">
-                            <div className="bg-gradient-to-br from-blue-50 to-white rounded-xl overflow-hidden aspect-[4/5] relative mb-4">
-                                <img
-                                    src="/ais-research.jpg"
-                                    alt="リサーチ・情報収集担当のアイズくん"
-                                    className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500 contrast-[1.15] saturate-[1.15] brightness-[1.05]"
-                                />
-                                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-blue-900/80 to-transparent">
-                                    <div className="flex items-center gap-2 text-white/90">
-                                        <Search className="w-4 h-4" />
-                                        <span className="text-xs font-bold tracking-wider">RESEARCHER</span>
-                                    </div>
-                                </div>
+                    {/* Top: Human Manager */}
+                    <div className="!flex !flex-col items-center relative z-20 mb-8 md:mb-16">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="relative"
+                        >
+                            {/* Manager Node - Mobile Optimized Size */}
+                            <div className="w-20 h-20 md:w-32 md:h-32 bg-white rounded-full border-4 border-blue-100 shadow-lg flex items-center justify-center relative z-20">
+                                <User className="w-8 h-8 md:w-12 md:h-12 text-blue-600" />
                             </div>
-                            <h3 className="text-xl font-bold text-center text-gray-900 py-2 border-b-2 border-blue-500 inline-block w-full">
-                                リサーチ・情報収集 担当
-                            </h3>
-                        </div>
-                    </motion.div>
+                            <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-[#0A192F] text-white text-[10px] md:text-sm font-bold px-3 py-1 md:px-4 md:py-1.5 rounded-full whitespace-nowrap z-30 shadow-md">
+                                Human Manager (あなた)
+                            </div>
+                        </motion.div>
 
-                    {/* Staff 3: Design (Orange) */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.3 }}
-                        className="group relative"
-                    >
-                        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-orange-500/10 rounded-2xl transform group-hover:scale-[1.02] transition-transform duration-300" />
-                        <div className="relative bg-white p-2 rounded-2xl border border-orange-100 shadow-sm overflow-hidden">
-                            <div className="bg-gradient-to-br from-orange-50 to-white rounded-xl overflow-hidden aspect-[4/5] relative mb-4">
-                                <img
-                                    src="/ais-design.jpg"
-                                    alt="クリエイティブ・図解担当のアイズくん"
-                                    className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500 contrast-[1.15] saturate-[1.15] brightness-[1.05]"
-                                />
-                                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-orange-900/80 to-transparent">
-                                    <div className="flex items-center gap-2 text-white/90">
-                                        <PenTool className="w-4 h-4" />
-                                        <span className="text-xs font-bold tracking-wider">CREATOR</span>
+                        {/* Connection Line (Mobile Vertical Start) */}
+                        <div className="h-8 md:h-16 w-0.5 bg-blue-200 mt-2 relative overflow-hidden">
+                            <motion.div
+                                animate={{ y: ["0%", "100%"] }}
+                                transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
+                                className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-transparent to-blue-500"
+                            />
+                        </div>
+                    </div>
+
+                    {/* Org Chart Lines (Desktop Only) */}
+                    <div className="hidden md:block absolute top-[180px] left-0 w-full h-8 z-0">
+                        {/* Horizontal Line */}
+                        <div className="absolute top-0 left-[16.66%] right-[16.66%] h-0.5 bg-blue-200"></div>
+                        {/* Vertical Lines to Employees */}
+                        <div className="absolute top-0 left-[16.66%] h-8 w-0.5 bg-blue-200"></div>
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 h-8 w-0.5 bg-blue-200"></div>
+                        <div className="absolute top-0 right-[16.66%] h-8 w-0.5 bg-blue-200"></div>
+                    </div>
+
+                    {/* AI Employees Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+                        {/* Mobile Connecting Lines (Vertical Flow Background) - connects all cards */}
+                        <div className="md:hidden absolute top-[-30px] bottom-10 left-1/2 -translate-x-1/2 w-0.5 bg-blue-200 -z-10" />
+
+                        {[
+                            {
+                                role: "資料作成・分析",
+                                roleEn: "ANALYST",
+                                image: "/ais-creation.jpg",
+                                color: "emerald",
+                                badges: ["24時間稼働", "ミス0%"]
+                            },
+                            {
+                                role: "リサーチ・情報収集",
+                                roleEn: "RESEARCHER",
+                                image: "/ais-research.jpg",
+                                color: "blue",
+                                badges: ["多言語対応", "神速調査"]
+                            },
+                            {
+                                role: "クリエイティブ・図解",
+                                roleEn: "CREATOR",
+                                image: "/ais-design.jpg",
+                                color: "orange",
+                                badges: ["高品質", "修正無制限"]
+                            }
+                        ].map((staff, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.15 + 0.2 }}
+                                className="flex flex-col items-center bg-white p-4 rounded-xl shadow-lg border border-gray-100 relative group max-w-xs mx-auto md:max-w-none w-full"
+                            >
+                                {/* Mobile Arrow Icon for vertical flow */}
+                                <div className="md:hidden absolute -top-10 left-1/2 -translate-x-1/2 text-blue-300 bg-slate-50 rounded-full p-1 z-0">
+                                    <ArrowDown className="w-4 h-4" />
+                                </div>
+
+                                <div className="absolute -top-3 left-4 flex gap-2 z-20">
+                                    {staff.badges.map((badge, i) => (
+                                        <span key={i} className={`text-[10px] font-bold px-2 py-1 rounded-md text-white shadow-sm
+                                            ${staff.color === 'emerald' ? 'bg-emerald-500' :
+                                                staff.color === 'blue' ? 'bg-blue-500' : 'bg-orange-500'}`}>
+                                            {badge}
+                                        </span>
+                                    ))}
+                                </div>
+
+                                <div className="w-full aspect-[4/3] rounded-lg overflow-hidden mb-4 relative">
+                                    <img
+                                        src={staff.image}
+                                        alt={staff.role}
+                                        className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent flex items-end p-3">
+                                        <p className="text-white text-xs font-bold tracking-widest opacity-90">{staff.roleEn}</p>
                                     </div>
                                 </div>
-                            </div>
-                            <h3 className="text-xl font-bold text-center text-gray-900 py-2 border-b-2 border-orange-500 inline-block w-full">
-                                クリエイティブ・図解 担当
-                            </h3>
-                        </div>
-                    </motion.div>
+
+                                <div className="text-center w-full">
+                                    <h3 className="font-bold text-gray-900 border-b pb-2 mb-2">{staff.role}</h3>
+                                    <p className="text-xs text-gray-500">
+                                        あなたの指示一つで、<br />最高のアウトプットを提供。
+                                    </p>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
 
-                {/* Bottom Offer Section */}
+                {/* Bottom Offer Section (Compact) */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden relative"
+                    className="max-w-4xl mx-auto"
                 >
-                    <div className="absolute top-0 w-full h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500" />
-
-                    <div className="p-8 md:p-12 text-center">
-                        <div className="mb-10">
-                            <p className="text-gray-500 font-bold mb-2 tracking-widest text-sm">COST PERFORMANCE</p>
-                            <div className="flex items-baseline justify-center gap-2 mb-2">
-                                <span className="text-2xl font-bold text-gray-700">月給</span>
-                                <span className="text-6xl md:text-7xl font-black text-[#2563eb] tracking-tighter">
-                                    33,000
-                                </span>
-                                <span className="text-2xl font-bold text-gray-700">円から</span>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+                            <div className="p-3 bg-blue-50 text-blue-600 rounded-full mb-3">
+                                <Clock className="w-6 h-6" />
                             </div>
-                            <span className="inline-block bg-blue-50 text-blue-700 px-6 py-2 rounded-full font-bold text-sm md:text-base">
-                                パート1人分の給与で、無限の働き手
-                            </span>
+                            <h4 className="font-bold text-gray-900 text-sm mb-1">24時間365日稼働</h4>
+                            <p className="text-xs text-gray-500">深夜・休日も即対応</p>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-                            <div className="flex gap-4 p-4 rounded-xl bg-gray-50 border border-gray-100">
-                                <div className="shrink-0 p-3 bg-white rounded-lg shadow-sm text-blue-600 h-fit">
-                                    <Clock className="w-6 h-6" />
-                                </div>
-                                <div>
-                                    <h4 className="font-bold text-gray-900 mb-1">24時間稼働、休みなし</h4>
-                                    <p className="text-xs text-gray-600 leading-relaxed">
-                                        深夜・休日も文句なし。<br />残業代・深夜手当0。
-                                    </p>
-                                </div>
+                        <div className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+                            <div className="p-3 bg-blue-50 text-blue-600 rounded-full mb-3">
+                                <CheckCircle className="w-6 h-6" />
                             </div>
+                            <h4 className="font-bold text-gray-900 text-sm mb-1">精度100%の実行力</h4>
+                            <p className="text-xs text-gray-500">人的ミス・感情のブレなし</p>
+                        </div>
 
-                            <div className="flex gap-4 p-4 rounded-xl bg-gray-50 border border-gray-100">
-                                <div className="shrink-0 p-3 bg-white rounded-lg shadow-sm text-blue-600 h-fit">
-                                    <CheckCircle className="w-6 h-6" />
-                                </div>
-                                <div>
-                                    <h4 className="font-bold text-gray-900 mb-1">不平不満なし、完璧品質</h4>
-                                    <p className="text-xs text-gray-600 leading-relaxed">
-                                        感情に左右されず精度100%。<br />退職リスクもゼロ。
-                                    </p>
-                                </div>
+                        <div className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+                            <div className="p-3 bg-blue-50 text-blue-600 rounded-full mb-3">
+                                <TrendingDown className="w-6 h-6" />
                             </div>
-
-                            <div className="flex gap-4 p-4 rounded-xl bg-gray-50 border border-gray-100">
-                                <div className="shrink-0 p-3 bg-white rounded-lg shadow-sm text-blue-600 h-fit">
-                                    <TrendingDown className="w-6 h-6" />
-                                </div>
-                                <div>
-                                    <h4 className="font-bold text-gray-900 mb-1">採用リスクとコスト激減</h4>
-                                    <p className="text-xs text-gray-600 leading-relaxed">
-                                        社保・交通費・福利厚生など<br />隠れたコストをすべてカット。
-                                    </p>
-                                </div>
-                            </div>
+                            <h4 className="font-bold text-gray-900 text-sm mb-1">採用・教育コスト0</h4>
+                            <p className="text-xs text-gray-500">初日から即戦力として活躍</p>
                         </div>
                     </div>
                 </motion.div>

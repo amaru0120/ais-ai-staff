@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import { BOOKING_URL } from '../constants';
+import { BOOKING_URL, CONTACT_EMAIL } from '../constants';
 
 export const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -19,7 +19,7 @@ export const Navbar = () => {
         { name: 'サービス', href: '#service' },
         { name: '導入の流れ', href: '#onboarding' },
         { name: 'AI一覧', href: '#ai-tools' },
-        { name: 'FAQ', href: '#faq' },
+
         { name: '実績', href: '#case-studies' },
     ];
 
@@ -94,6 +94,13 @@ export const Navbar = () => {
                                 className="bg-accent text-white text-center py-4 rounded-xl font-bold mt-4"
                             >
                                 無料診断を予約
+                            </a>
+                            <a
+                                href={`mailto:${CONTACT_EMAIL}`}
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="bg-gray-100 text-primary text-center py-4 rounded-xl font-bold mt-2 hover:bg-gray-200 transition-colors"
+                            >
+                                メールで問い合わせ
                             </a>
                         </div>
                     </motion.div>

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Mail, Phone, Calendar, Send } from 'lucide-react';
-import { BOOKING_URL } from '../constants';
+import { BOOKING_URL, CONTACT_EMAIL } from '../constants';
 
 export const Contact = () => {
     return (
@@ -46,7 +46,7 @@ export const Contact = () => {
                                     </div>
                                     <div>
                                         <div className="text-sm text-gray-400 font-medium mb-1 uppercase tracking-wider">Email</div>
-                                        <div className="text-primary font-bold">contact@ais-strategic.com</div>
+                                        <div className="text-primary font-bold">{CONTACT_EMAIL}</div>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-4">
@@ -100,10 +100,10 @@ export const Contact = () => {
                                         <Calendar className="w-5 h-5" />
                                         カレンダーから予約
                                     </a>
-                                    <button className="w-full bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-2xl flex items-center justify-center gap-3 border border-white/10 transition-all">
+                                    <a href={`mailto:${CONTACT_EMAIL}`} className="w-full bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-2xl flex items-center justify-center gap-3 border border-white/10 transition-all">
                                         <Send className="w-5 h-5" />
                                         メールで問い合わせ
-                                    </button>
+                                    </a>
                                 </div>
 
                                 <p className="text-[10px] text-gray-500 mt-8 text-center uppercase tracking-widest font-bold">

@@ -9,7 +9,7 @@ import { Service } from './components/Service';
 import { Trust, Footer } from './components/Trust';
 import { OnboardingSteps } from './components/OnboardingSteps';
 import { AIToolsGrid } from './components/AIToolsGrid';
-import { FAQ } from './components/FAQ';
+
 import { Contact } from './components/Contact';
 import { FloatingCTA } from './components/FloatingCTA';
 
@@ -29,7 +29,7 @@ function App() {
       <Trust />
       <OnboardingSteps />
       <AIToolsGrid />
-      <FAQ />
+
       <Contact />
       <Footer />
       <FloatingCTA />
